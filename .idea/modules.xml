@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LatUts.iml" filepath="$PROJECT_DIR$/LatUts.iml" />
+      <module fileurl="file://E:\programandroid\UTS-Mobile\LatUts.iml" filepath="E:\programandroid\UTS-Mobile\LatUts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/UTS-Mobile.iml" filepath="$PROJECT_DIR$/.idea/UTS-Mobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\programandroid\UTS-Mobile\app\app.iml" filepath="E:\programandroid\UTS-Mobile\app\app.iml" />
     </modules>
   </component>
 </project>

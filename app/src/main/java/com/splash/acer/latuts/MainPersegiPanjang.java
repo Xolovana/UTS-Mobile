@@ -10,12 +10,48 @@ import android.widget.TextView;
 
 public class MainPersegiPanjang extends AppCompatActivity {
 
+    TextView tampil;
+    EditText masukan, masukan2;
+    Button tekan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_persegi_panjang);
 
+        tampil = (TextView) findViewById(R.id.text);
+        masukan = (EditText) findViewById(R.id.edit1);
+        masukan2 = (EditText) findViewById(R.id.edit2);
+        tekan = (Button) findViewById(R.id.tekan);
+
+
+        tekan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+
+                    int nilaiA = Integer.parseInt(masukan.getText().toString());
+                    int nilaiB = Integer.parseInt(masukan2.getText().toString());
+                    int hasil = nilaiA * nilaiB ;
+                    Intent i = new Intent(MainPersegiPanjang.this, MainHasil.class);
+                    i.putExtra("nilai", "" + hasil);
+                    startActivity(i);
+                } catch (Exception ex) {
+                }
+            }
+        });
+    }
+
+    public void tekan2(View view) {
+        try {
+            int nilaiA = Integer.parseInt(masukan.getText().toString());
+            int nilaiB = Integer.parseInt(masukan2.getText().toString());
+            int hasil = 2 * nilaiB + 2* nilaiA;
+            Intent i = new Intent(MainPersegiPanjang.this, MainHasil.class);
+            i.putExtra("nilai", "" + hasil);
+            startActivity(i);
+        } catch (Exception ex) {
+        }
     }
 }
 
